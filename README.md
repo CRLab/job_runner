@@ -1,6 +1,6 @@
 # job_runner
 
-Very lightweight tool for python multiprocessing.  Just override get_tasks to create a dictionary of tasks.  And run_task to specify how a single task should be run. You can also specify how many workers to run, default is n-2 of however many your machine has. Each worker is its own process.
+Very lightweight tool for python multiprocessing.  Just override get_tasks to create a dictionary of tasks.  And run_task to specify how a single task should be run. You can also specify how many workers to run, default is n-2 of however many cores your machine has. Each worker is its own process.
 
 Example
 

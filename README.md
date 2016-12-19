@@ -1,8 +1,10 @@
 # job_runner
 
-Useful little helper class for running multiprocess jobs using python.  Example
+Very lightweight tool for python multiprocessing.  Just override get_tasks to create a dictionary of tasks.  And run_task to specify how a single task should be run. You can also specify how many workers to run, default is n-2 of however many your machine has. Each worker is its own process.
 
-'''
+Example
+
+```
 import job_runner
 
 
@@ -18,6 +20,6 @@ class PrintJobRunner(job_runner.JobRunner):
         print task
 
 if __name__ == "__main__":
-    job_runner = PrintJobRunner()
+    job_runner = PrintJobRunner(num_workers=4)
     job_runner.run()
-'''
+```
